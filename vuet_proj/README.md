@@ -1,5 +1,13 @@
 # vuet_proj
 
+## Призначення проекту
+vuet proj - це сайт золблений на Vue та Vuetify (у майбутньому з використанням SSE для роботи чату та з простенькою грою).
+
+## Учасники проекту
+
+Yurii Onyshchuk: fjehhur@gmail.com</br>
+Dmytro Lypchak dl080202@gmail.com</br>
+
 ## Project setup
 ```
 npm install
