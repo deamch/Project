@@ -258,7 +258,7 @@ SSE were designed for text-based and unidirectional transport. Here’s the [cur
 
 Continue your learning by exploring [all of the features available to `EventSource`](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) like `retry`.
 
-## Матеріал підготував 
-* *студент групи ІВ-91 Черних Богдан* - [ForeverProglamer](https://github.com/ForeverProglamer)
+## Матеріал підготували 
+* *студент групи :D
 
 ><a href="https://github.com/ForeverProglamer/async-code-in-js" target="_blank">https://github.com/ForeverProglamer/async-code-in-js</a>
