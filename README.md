@@ -20,7 +20,7 @@ Dmytro Lypchak dl080202@gmail.com</br>
 
 >Доповідь знаходиться [тут](./doc/Site_Vuetify+SSE.md)
 
->><a href="https://github.com/deamch/Project" target="_blank">https://github.com/deamch/Project</a>
+><a href="https://github.com/deamch/Project" target="_blank">https://github.com/deamch/Project</a>
 
 
 ### Customize configuration
