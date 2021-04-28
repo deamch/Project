@@ -260,7 +260,7 @@ Continue your learning by exploring [all of the features available to `EventSour
 
 ## Матеріал підготували 
 Cтуденти групи ІВ-91
-* Липчак Дмитро
-* Онищук Юрій
+* Липчак Дмитро [telegram](https://t.me/Meamch)
+* Онищук Юрій [telegram](https://t.me/deGenre)
 
 ><a href="https://github.com/deamch/Project" target="_blank">https://github.com/deamch/Project</a>
