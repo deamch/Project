@@ -273,14 +273,8 @@ SSE were designed for text-based and unidirectional transport. Here’s the [cur
 Continue your learning by exploring [all of the features available to `EventSource`](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) like `retry`.
 
 ## Матеріал підготували 
-<<<<<<< HEAD
 *студенти групи ІВ-91
 Липчак Дмитро [telegram](https://t.me/Meamch), пошта dl080202@gmail.com
 Онищук Юрій [telegram](https://t.me/deGenre), пошта fjehhur@gmail.com
-=======
-Cтуденти групи ІВ-91
-* Липчак Дмитро [telegram](https://t.me/Meamch)
-* Онищук Юрій [telegram](https://t.me/deGenre)
->>>>>>> 3ec5f38b74319c48154425b4c54c3a475d3fc50b
 
 ><a href="https://github.com/deamch/Project" target="_blank">https://github.com/deamch/Project</a>
