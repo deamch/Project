@@ -233,7 +233,7 @@ At this point, the backend is fully functional. It is now time to implement the 
 ## Step 3 – Building the Vue(Vuetify) Web App Frontend
 
 ### Vue CLI install
-> `For information on how to use Vue CLI, visit the [official documentation](https://cli.vuejs.org/).`
+> For information on how to use Vue CLI, visit the [official documentation](https://cli.vuejs.org/).
 If you have not already created a new Vue.js project using Vue CLI, you can do so by typing:
 
 
@@ -242,11 +242,11 @@ If you have not already created a new Vue.js project using Vue CLI, you can do s
 npm install -g @vue/cli
 
 vue create my-app
-`navigate to new project directory`
+
 cd my-app
 ```
 
-Now that you have an instantiated project, you can add the Vuetify Vue CLI package using the cli.
+Now that you have an instantiated project, you can add the [Vuetify Vue CLI package](https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify-cli) using the cli.
 
 ```js
 vue add vuetify
