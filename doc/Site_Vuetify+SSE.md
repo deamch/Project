@@ -232,14 +232,17 @@ At this point, the backend is fully functional. It is now time to implement the 
 
 ## Step 3 – Building the Vue(Vuetify) Web App Frontend
 
-### NPM
-NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as Webpack or Browserify. Vue also provides accompanying tools for authoring Single File Components.
-
+### Vue CLI install
+> `For information on how to use Vue CLI, visit the [official documentation](https://cli.vuejs.org/).`
 If you have not already created a new Vue.js project using Vue CLI, you can do so by typing:
 
+
+`Install:`
 ```js
+npm install -g @vue/cli
+
 vue create my-app
-# navigate to new project directory
+`navigate to new project directory`
 cd my-app
 ```
 
@@ -248,8 +251,6 @@ Now that you have an instantiated project, you can add the Vuetify Vue CLI packa
 ```js
 vue add vuetify
 ```
-
-
 
 ## Step 4 – Testing the Frontend
 Now, try adding a new fact.
