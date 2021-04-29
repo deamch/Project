@@ -18,7 +18,7 @@ vuet proj - це сайт зроблений на Vue та Vuetify (у майб�
 Yurii Onyshchuk: fjehhur@gmail.com</br>
 Dmytro Lypchak dl080202@gmail.com</br>
 
->Доповідь знаходиться [тут](./doc/Site_Vuetify+SSE.md)
+>Документація знаходиться [тут](./doc/Site_Vuetify+SSE.md)
 
 ><a href="https://github.com/deamch/Project" target="_blank">https://github.com/deamch/Project</a>
 
