@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Server-Sent Events (SSE) is a technology based on HTTP. On the client-side, it provides an API called EventSource (part of the HTML5 standard) that allows us to connect to the server and receive updates from it.
+Server-Sent Events (SSE) is a technology based on HTTP. On the client-side, it provides an API called `EventSource` (part of the HTML5 standard) that allows us to connect to the server and receive updates from it.
 
 Before making the decision to use server-sent events, we must take into account two very important aspects:
 
 * It only allows data reception from the server (unidirectional)
 * Events are limited to UTF-8 (no binary data)
-If your project only receives something like stock prices or text information about something in progress it is a candidate for using Server-Sent Events instead of an alternative like WebSockets.
+If your project only receives something like stock prices or text information about something in progress it is a candidate for using Server-Sent Events instead of an alternative like [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket).
 
 In this article, you will build a complete solution for both the backend and frontend to handle real-time information flowing from server to client. The server will be in charge of dispatching new updates to all connected clients and the web app will connect to the server, receive these updates and display them.
 
@@ -16,14 +16,12 @@ In this article, you will build a complete solution for both the backend and fro
 
 To follow through this tutorial, you’ll need:
 
-В JavaScript з асинхронністю ситуація така: вона присутня за замовчуванням. Код, що містить так звані "асинхронні операції" буде виконуватися асинхронно. Асинхронними операціями можна вважати ті, що створюють затримку, але не блокують виконання программи. З найпростіших можна навести методи `setTimeout()`, `setInterval()`.  
-
-* A local development environment for Node.js. Follow How to Install Node.js and Create a Local Development Environment.
+* A local development environment for Node.js. Follow [How to Install Node.js and Create a Local Development Environment](https://www.digitalocean.com/community/tutorial_series/how-to-install-node-js-and-create-a-local-development-environment).
 * Familiarity with Express.
-* Familiarity with React (and hooks).
-* cURL is used to verify the endpoints. This may already be available in your environment or you may need to install it. Some familiarity with using command-line tools and options will also be helpful.
+* Familiarity with Vue and Vuetify.
+* [cURL](https://www.digitalocean.com/community/tutorials/workflow-downloading-files-curl) is used to verify the endpoints. This may already be available in your environment or you may need to install it. Some familiarity with using command-line tools and options will also be helpful.
 
-This tutorial was verified with cURL v7.64.1, Node v15.3.0, `npm` v7.4.0, `express` v4.17.1, `body-parser` v1.19.0, `cors` v2.8.5, and `react` v17.0.1.
+This tutorial was verified with cURL v7.64.1, Node v15.3.0, `npm` v7.4.0, `express` v4.17.1, `body-parser` v1.19.0, `cors` v2.8.5, `vue` vTBA and `vuetify` vTBA.
 
 ## Step 1 – Building the SSE Express Backend
 
@@ -59,7 +57,7 @@ Initialize a new npm project:
 npm init -y
 ```
 
-Install express, body-parser, and cors:
+Install `express`, `body-parser`, and `cors`:
 
 ```js
 npm install express@4.17.1 body-parser@1.19.0 cors@2.8.5 --save
@@ -70,13 +68,13 @@ This completes setting up dependencies for the backend.
 In this section, you will develop the backend of the application. It will need to support these features:
 
 Keeping track of open connections and broadcast changes when new facts are added
-* GET /events endpoint to register for updates
-* POST /facts endpoint for new facts
-* GET /status endpoint to know how many clients have connected
-* cors middleware to allow connections from the frontend app
-Use the first terminal session that is in the sse-server directory. Create a new server.js file:
+* `GET /events` endpoint to register for updates
+* `POST /facts` endpoint for new facts
+* `GET /status` endpoint to know how many clients have connected
+* `cors` middleware to allow connections from the frontend app
+Use the first terminal session that is in the `sse-server` directory. Create a new server.js file:
 
-Open the server.js file in your code editor. Require the needed modules and initialize Express app:
+Open the `server.js` file in your code editor. Require the needed modules and initialize Express app:
 
 **sse-server/server.js**
 ```js
@@ -102,9 +100,9 @@ app.listen(PORT, () => {
 })
 ```
  
-Then, build the middleware for GET requests to the /events endpoint. Add the following lines of the code to server.js:
+Then, build the middleware for `GET` requests to the `/events` endpoint. Add the following lines of the code to `server.js`:
 
-sse-server/server.js
+`sse-server/server.js`
 ```js
 // ...
 
@@ -148,8 +146,7 @@ A `clientId` is generated based on the timestamp and the response Express object
 
 Then, build the middleware for `POST` requests to the `/fact` endpoint. Add the following lines of the code to `server.js`:
 
-sse-server/server.js
-
+`sse-server/server.js`
 ```js
 // ...
 
@@ -233,7 +230,24 @@ data: [{"info": "Shark teeth are embedded in the gums rather than directly affix
  
 At this point, the backend is fully functional. It is now time to implement the `EventSource` API on the frontend.
 
-## Step 3 – Building the React Web App Frontend
+## Step 3 – Building the Vue(Vuetify) Web App Frontend
+
+### NPM
+NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as Webpack or Browserify. Vue also provides accompanying tools for authoring Single File Components.
+
+If you have not already created a new Vue.js project using Vue CLI, you can do so by typing:
+
+```js
+vue create my-app
+# navigate to new project directory
+cd my-app
+```
+
+Now that you have an instantiated project, you can add the Vuetify Vue CLI package using the cli.
+
+```js
+vue add vuetify
+```
 
 
 
@@ -259,6 +273,8 @@ SSE were designed for text-based and unidirectional transport. Here’s the [cur
 Continue your learning by exploring [all of the features available to `EventSource`](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) like `retry`.
 
 ## Матеріал підготували 
-* *студент групи :D
+*студенти групи ІВ-91
+Липчак Дмитро [telegram](https://t.me/Meamch), пошта dl080202@gmail.com
+Онищук Юрій [telegram](https://t.me/deGenre), пошта fjehhur@gmail.com
 
 ><a href="https://github.com/ForeverProglamer/async-code-in-js" target="_blank">https://github.com/ForeverProglamer/async-code-in-js</a>
